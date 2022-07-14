@@ -2,7 +2,15 @@
 #define NARANJA_H
 
 #include <QMainWindow>
-#include <QListWidget>
+#include <QMouseEvent>
+#include <QFileDialog>
+#include <QClipboard>
+#include <QColorDialog>
+#include <QPainter>
+#include <QMessageBox>
+#include <cmath>
+#include <fstream>
+#include <QString>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Naranja; }
@@ -20,14 +28,6 @@ public:
     void mouseMoveEvent(QMouseEvent *event);
 
 private slots:
-    void on_commandLinkButton_clicked();
-
-    void on_commandLinkButton_2_clicked();
-
-    void on_commandLinkButton_3_clicked();
-
-    void on_commandLinkButton_4_clicked();
-
     void on_pushButton_clicked();
 
     void on_pushButton_2_clicked();
@@ -64,31 +64,31 @@ private slots:
 
     void on_pushButton_18_clicked();
 
-    void on_pushButton_19_clicked();
-
     void on_pushButton_20_clicked();
+
+    void on_commandLinkButton_3_clicked();
+
+    void on_commandLinkButton_4_clicked();
+
+    void on_pushButton_19_clicked();
 
     void on_pushButton_21_clicked();
 
     void on_pushButton_22_clicked();
 
-    void on_commandLinkButton_5_clicked();
-
     void on_pushButton_23_clicked();
 
-    void on_commandLinkButton_6_clicked();
-
-    void on_listWidget_itemDoubleClicked(QListWidgetItem *item);
+    void on_commandLinkButton_2_clicked();
 
     void on_pushButton_24_clicked();
 
     void on_pushButton_25_clicked();
 
-    void on_pushButton_28_clicked();
-
     void on_pushButton_27_clicked();
 
     void on_pushButton_26_clicked();
+
+    void on_pushButton_28_clicked();
 
     void on_pushButton_29_clicked();
 
@@ -102,27 +102,23 @@ private slots:
 
     void on_pushButton_34_clicked();
 
-    void on_commandLinkButton_7_clicked();
+    void on_pushButton_35_clicked();
 
-    void on_commandLinkButton_8_clicked();
+    void on_pushButton_36_clicked();
 
-    void on_commandLinkButton_9_clicked();
+    void on_pushButton_37_clicked();
 
-    void on_commandLinkButton_10_clicked();
+    void on_pushButton_38_clicked();
 
-    void on_commandLinkButton_11_clicked();
+    void on_pushButton_39_clicked();
 
-    void on_commandLinkButton_12_clicked();
+    void on_pushButton_40_clicked();
 
-    void on_commandLinkButton_13_clicked();
+    void on_pushButton_41_clicked();
 
-    void on_commandLinkButton_14_clicked();
+    void on_pushButton_42_clicked();
 
-    void on_commandLinkButton_15_clicked();
-
-    void on_commandLinkButton_16_clicked();
-
-    void on_commandLinkButton_17_clicked();
+    void on_label_2_linkActivated(const QString &link);
 
 private:
     Ui::Naranja *ui;

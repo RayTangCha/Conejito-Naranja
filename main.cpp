@@ -7,13 +7,21 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    QPixmap pix(":/new/prefix1/D13ACE72-BE79-42FF-9CAE-A9EAEB8487E6.jpg");
-    QSplashScreen splash(pix);
-    splash.show();
-    a.processEvents();
     Naranja w;
-    Sleep(1000);
-    w.show();
-    splash.finish(&w);
+    std::ifstream ifs;
+    ifs.open("C:\\Users\\Public\\Documents\\NaranjaSettings.dat");
+    int settings=1;
+    if(ifs.is_open())ifs>>settings;
+    ifs.close();
+    if(settings%10){
+        QPixmap pix(":/new/prefix1/ganapathy-kumar-L75D18aVal8-unsplash.jpg");
+        QSplashScreen splash(pix);
+        splash.show();
+        a.processEvents();
+        Sleep(1000);
+        w.show();
+        splash.finish(&w);
+    }
+    else w.show();
     return a.exec();
 }
